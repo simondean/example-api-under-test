@@ -1,0 +1,18 @@
+{
+  "name": "example-api-under-test",
+  "description": "Example API used in example tests",
+  "private": true,
+  "author": "Simon Dean <simon@simondean.org> (http://www.simondean.org)",
+  "contributors": [],
+  "engines": {
+    "node": ">=0.6"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/simondean/example-api-under-test/LICENSE"
+    }
+  ]
+}
