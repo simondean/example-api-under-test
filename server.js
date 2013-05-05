@@ -12,7 +12,7 @@ function primeNumber(req, res, next) {
     res.json({ number: number, prime: true });
   }
   else {
-    res.send(404, "Not found");
+    next(new Restify.NotFoundError(number + " is not a prime number"));
   }
 }
 
