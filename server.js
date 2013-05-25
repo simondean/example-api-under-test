@@ -16,8 +16,16 @@ function primeNumber(req, res, next) {
   }
 }
 
+function wait(req, res, next) {
+  var milliseconds = parseInt(req.params.milliseconds, 10);
+
+  setTimeout(function() { res.json({ milliseconds: milliseconds }); }, milliseconds);
+}
+
 server.get('/prime-number/:number', primeNumber);
 server.head('/prime-number/:number', primeNumber);
+server.get('/wait/:milliseconds', wait);
+server.head('/wait/:milliseconds', wait);
 
 server.listen(3000, function() {
   console.log('%s listening at %s', server.name, server.url);
